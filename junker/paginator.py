@@ -18,6 +18,8 @@ class EmptyPage(InvalidPage):
 
 class Paginator(object):
 
+    """ paginator function"""
+
     def __init__(self, object_list, per_page, orphans=0,
                  allow_empty_first_page=True):
         self.object_list = object_list
@@ -25,6 +27,7 @@ class Paginator(object):
         self.orphans = int(orphans)
         self.allow_empty_first_page = allow_empty_first_page
         self._num_pages = self._count = None
+	print "I am in __init__ func"
 
     def validate_number(self, number):
         """
