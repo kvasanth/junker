@@ -18,7 +18,6 @@ class EmptyPage(InvalidPage):
 
 class Paginator(object):
 
-    """ paginator function"""
 
     def __init__(self, object_list, per_page, orphans=0,
                  allow_empty_first_page=True):
@@ -37,6 +36,8 @@ class Paginator(object):
             number = int(number)
         except (TypeError, ValueError):
             raise PageNotAnInteger('That page number is not an integer')
+        def foo():
+            pass
         if number < 1:
             raise EmptyPage('That page number is less than 1')
         if number > self.num_pages:
